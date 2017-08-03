@@ -15,7 +15,9 @@
 _pcq.push(['APIReady', callbackOnSuccessFunction,callbackOnFailureFunction]); //will execute callback function when PushCrew API is ready
 
 function callbackOnSuccessFunction() {
-    console.log('API is Ready')
+    if(pushcrew.isAPIReady) {
+    console.log('API is ready');
+}
     //now api is ready
 }
 
