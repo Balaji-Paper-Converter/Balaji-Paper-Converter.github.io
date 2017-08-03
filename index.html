@@ -20,7 +20,11 @@ _pcq.push(['APIReady', callbackOnSuccessFunction,callbackOnFailureFunction]); //
 
 function callbackOnSuccessFunction() {
     if(pushcrew.isAPIReady) {
+        
+        
     console.log('API is ready');
+        window._pcq.push(['triggerOptIn',{subscriberSegment: 'homepage', modal: {text: 'Get instant alerts from our website. Please subscribe.', blackenBackground: true}}]); //Calls triggerOptIn with custom text, blackened background and segment as 'homepage'
+
 }
     //now api is ready
 }
