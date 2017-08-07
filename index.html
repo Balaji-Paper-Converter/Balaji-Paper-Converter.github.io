@@ -42,6 +42,20 @@ window._pcq.push(['triggerOptIn', {subscriberSegment: 'homepage'}]); //Calls tri
 
 window._pcq.push(['triggerOptIn']); //Calls triggerOptIn with default text and default segment(global)
 </script> -->
+    <script>
+        _pcq.push(['APIReady', callbackFunction]);
+
+//some code here
+
+function callbackFunction() {
+      console.log(pushcrew.subscriberId); // will return something like this if current user is a subscriber '1c5d546172cfb4be65a8d51b047c4804'
+
+  console.log(pushcrew.subscriberId); // will return false(boolean) if user is not subscribed to push notifications
+
+  console.log(pushcrew.subscriberId); // will return -1(integer) if user has blocked push notifications from your website   
+}
+    </script>
+    
 </head>
 <body>
 
