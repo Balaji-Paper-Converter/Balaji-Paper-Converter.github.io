@@ -14,106 +14,18 @@
     window._pcq = window._pcq || [];
     
     </script>
-    <script>
-        window._pcq = window._pcq || [];
-_pcq.push(['subscriptionSuccessCallback',callbackFunctionOnSuccessfulSubscription]); //registers callback function to be called when user gets successfully subscribed
-
-function callbackFunctionOnSuccessfulSubscription(subscriberId, values) {
-    console.log('User got successfully subscribed.');
-
-    console.log(subscriberId); //will output the user's subscriberId
-
-    console.log(values.status); // SUBSCRIBED or ALREADYSUBSCRIBED
-
-    console.log(values.message) // 'User has subscribed to push notifications.' or 'User is already subscribed to push notifications.'
-
-    console.log('Now you may run code which should be executed once user gets successfully subscribed.');
-}
-    </script>
-    <!--<script>
-_pcq.push(['APIReady', callbackOnSuccessFunction,callbackOnFailureFunction]); //will execute callback function when PushCrew API is ready
-
-function callbackOnSuccessFunction() {
-    if(pushcrew.isAPIReady) {
-        
-        
-    console.log('API is ready');
-        window._pcq.push(['triggerOptIn',{subscriberSegment: 'homepage', modal: {text: 'Get instant alerts from our website. Please subscribe.', blackenBackground: true}}]); //Calls triggerOptIn with custom text, blackened background and segment as 'homepage'
-
-}
-    //now api is ready
-}
-
-function callbackOnFailureFunction(values) {
-    console.log(values.reasons) //It will give you the array of reasons why PushCrew API could not get ready .For eg:- ["PRIVATE_BROWSING", "BROWSER_NOT_SUPPORTED"] etc.
-}
-//Examples for HTTPS Implementations
-
-window._pcq.push(['triggerOptIn',{subscriberSegment: 'homepage', modal: {text: 'Get instant alerts from our website. Please subscribe.', blackenBackground: true}}]); //Calls triggerOptIn with custom text, blackened background and segment as 'homepage'
-
-window._pcq.push(['triggerOptIn',{subscriberSegment: 'homepage', modal: {text: 'Get instant alerts from our website. Please subscribe.', blackenBackground: true}}]); //Calls triggerOptIn with default text,  blackened background and segment and default segment as 'homepage'
-
-window._pcq.push(['triggerOptIn', {subscriberSegment: 'homepage'}]); //Calls triggerOptIn without modal and default segment as 'homepage'
-
-window._pcq.push(['triggerOptIn']); //Calls triggerOptIn with default text and default segment(global)
-</script> -->
-    
-    <!--<script>
-        window._pcq = window._pcq || [];
-_pcq.push(['APIReady', callbackOnAPIReady]); //will execute callback function when PushCrew API is ready
-
-function callbackOnAPIReady() {
-    //now api is ready
-    _pcq.push(['addSubscriberToSegment', 'homepage', callbackForAddToSegment]);
-}
-
-function callbackForAddToSegment(response) {
-    if(response === -1) {
-        console.log('User is not a subscriber or has blocked notifications');
-    }
-  
-    if(response === false) {
-        console.log('Segment name provided is not valid. Maximum length of segment name can be 30 chars and it can only contain alphanumeric characters, underscore and dash.');
-    }
-  
-    if(response === true) {
-        console.log('User got added to the segment successfully. Now you may run any code you wish to execute after user gets added to segment successfully');
-    }
-}
-    </script>-->
-    <!--<script>
-        window._pcq = window._pcq || [];
-
-_pcq.push(['APIReady', callbackOnAPIReady]); //will execute callback function when PushCrew API is ready
-
-function callbackOnAPIReady() {
-    _pcq.push(['removeSubscriberFromSegment', 'homepage', callbackForRemoveFromSegment]);  
-}
-
-function callbackForRemoveFromSegment(response) {
-    if(response === -1) {
-        console.log('User is not a subscriber or has blocked notifications');
-    }
-  
-    if(response === false) {
-        console.log('Segment name provided is not valid. Maximum length of segment name can be 30 chars and it can only contain alphanumeric characters, underscore and dash.');
-    }
-  
-    if(response === true) {
-        console.log('User got removed from the segment successfully. Now you may run any code you wish to execute after user gets removed from segment successfully');
-    }
-}
-    </script>-->
-    <script>
-        window._pcq = window._pcq || [];
-_pcq.push(['triggerOptOut']);
-    </script>
+   
     
 </head>
 <body>
 
 <h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<p1>This is a paragraph.</p1>
+    <h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
 
 </body>
 </html>
