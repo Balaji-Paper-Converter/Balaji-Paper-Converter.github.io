@@ -43,6 +43,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <img id="myImage" src="images2.jpeg" style="width:100px">
 
 <button onclick="document.getElementById('myImage').src='kitten-wallpaper1.jpg'">I am another kitty</button>
+    
+    <button onClick="clearListCookies();"> Clear cookies </button>
+    function clearListCookies(){
+    var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++){   
+            var spcook =  cookies[i].split("=");
+            document.cookie = spcook[0] + "=;expires=Thu, 21 Sep 1979 00:00:01 UTC;";                                
+        }
+        keys = Object.keys(localStorage);
+        var len = localStorage.length;
+    for (var i=0; i < len; i++) {
+        localStorage.removeItem(keys[i]);
+    }
+window.location="";
+    }
   
 </body>
 </html>
