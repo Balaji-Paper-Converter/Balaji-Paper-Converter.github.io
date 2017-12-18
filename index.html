@@ -43,9 +43,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <img id="myImage" src="images2.jpeg" style="width:100px">
 
 <button onclick="document.getElementById('myImage').src='kitten-wallpaper1.jpg'">I am another kitty</button>
-    
+        <button onclick="getcookies();"> Get cookies </button>
+
     
     <script type="text/javascript">
+        function getcookies()
+        {
+         document.cookie="test_cookie=1";
+            document.cookie="test_cookie1=1";
+            document.cookie="test_cookie2=21";
+            document.cookie="test_cookie3=1";
+        }
     function clearListCookies()
     {
    var cookies = document.cookie.split(";");
